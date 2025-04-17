@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. J. J. Magdum College Of Engineering, Jaysingpur is an Autonomous Institute providing quality education and technical expertise.">
+    <meta name="keywords" content="Dr. J. J. Magdum College, Engineering, Autonomous Institute, Best Engineering College, Top College in Maharashtra">
+    <meta name="author" content="College Admin">
+
+    <title>Dr. J. J. Magdum College Of Engineering</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* All existing styles remain unchanged */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fd;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .top-bar {
+            background: linear-gradient(90deg, #004aad, #0084ff);
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .title {
+            padding: 30px 20px;
+            background: white;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            border-radius: 15px;
+            animation: fadeIn 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .title img {
+            width: 80px;
+            height: auto;
+        }
+        .title-text {
+            text-align: left;
+        }
+        .title h1 {
+            color: #004aad;
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+        }
+        .title h4 {
+            color: #555;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        .navbar {
+            background: #004aad;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 0;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+        .nav-links a:hover {
+            background: #ff6600;
+            color: white;
+        }
+        .banner {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner img {
+            width: 90%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .banner img:hover {
+            transform: scale(1.03);
+        }
+        .departments {
+            padding: 60px 20px;
+            background: white;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .departments h2 {
+            color: #004aad;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .department-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .department {
+            background: linear-gradient(135deg, #ff6600, #ff4500);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            font-weight: bold;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .department:hover {
+            transform: scale(1.1);
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .cta button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+        }
+        .cta button:hover {
+            background: #ff6600;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.4);
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 25px;
+            background: linear-gradient(90deg, #004aad, #0084ff);
+            color: white;
+            margin-top: 40px;
+            font-size: 1.2rem;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #ff6600;
+        }
+        .achievements {
+            padding: 40px 20px;
+            background: #fff;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .achievements h2 {
+            color: #004aad;
+            margin-bottom: 30px;
+        }
+        .achievement-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stat {
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .stat-number {
+            font-size: 3.5rem;
+            color: #ff4500;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-label {
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stat.animate {
+            animation: countUp 0.5s ease forwards;
+        }
+        @keyframes numberAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .stat.animate .stat-number {
+            animation: numberAnimation 0.5s ease-in-out;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #004aad;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-button i {
+            color: white;
+            font-size: 24px;
+        }
+
+        .chatbot-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chatbot-header {
+            background: #004aad;
+            color: white;
+            padding: 15px;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .chatbot-input {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+        }
+
+        .chatbot-input input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .chatbot-input button {
+            background: #004aad;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .bot-message {
+            background: #f0f0f0;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background: #004aad;
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .title h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .department-list {
+                gap: 15px;
+            }
+
+            .department {
+                width: 100%;
+            }
+
+            .achievement-stats {
+                flex-direction: column;
+            }
+
+            .chatbot-window {
+                width: 90%;
+                right: 5%;
+                left: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- All HTML content remains unchanged until the script section -->
+    <header class="top-bar">
+        <span>DTE Code : EN-6277</span>
+        <div class="contact-info">
+            <a href="tel:+912332227901"><i class="fas fa-phone"></i> +91 2332 227901</a>
+            <a href="mailto:info@jjmcoe.ac.in"><i class="fas fa-envelope"></i> info@jjmcoe.ac.in</a>
+        </div>
+    </header>
+    <div class="container" style="transform: scale(0.9);">
+        <div class="title">
+            <img src="images/college-logo.png" alt="College Logo">
+            <div class="title-text">
+                <h4>Dr. J. J. Magdum Trust's</h4>
+                <h1>Dr. J. J. Magdum College Of Engineering</h1>
+                <h3>An Autonomous Institute (From 2024-25)</h3>
+                <p>NAAC Accredited | NBA Approved | AICTE Recognized</p>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Admission_page.html">Admission</a></li>
+            <li><a href="course_call.html">Course</a></li>
+            <li><a href="fees_page.html">Fees</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Contact_page.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="banner">
+        <img src="images/collage.png" alt="College Building">
+    </section>
+    <section class="achievements">
+        <h2>Our Milestones of Excellence</h2>
+        <div class="achievement-stats">
+            <div class="stat">
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Successful Placements</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Leading Industry Collaborations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-label">Expert Faculty Members</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="25">0</div>
+                <div class="stat-label">Years of Academic Excellence</div>
+            </div>
+        </div>
+    </section>
+    <section class="departments">
+        <h2>Our Departments</h2>
+        <div class="department-list">
+            <div class="department"><a href="https://civil.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Civil Engineering</a></div>
+            <div class="department"><a href="https://mechanical.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Mechanical Engineering</a></div>
+            <div class="department"><a href="https://cse.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Computer Science</a></div>
+            <div class="department"><a href="https://electronics.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Electronics Engineering</a></div>
+            <div class="department"><a href="https://electrical.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Electrical Engineering</a></div>
+            <div class="department"><a href="https://it.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Information Technology</a></div>
+            <div class="department"><a href="https://aids.jjmcoe.ac.in/" style="color: white; text-decoration: none;">Artificial Intelligence & Data Science</a></div>
+        </div>
+    </section>
+    <div class="cta">
+        <button onclick="applyNow()">Apply Now</button>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-button" onclick="toggleChatbot()">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot-window" id="chatbot">
+            <div class="chatbot-header">
+                <span>College Assistant</span>
+                <i class="fas fa-times" onclick="toggleChatbot()"></i>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/jjmcoe.jaysingpur/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/jjmcoe" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/school/jjmcoe/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/jjmcoe.jaysingpur/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>Address: Jaysingpur-Wathar Road, Jaysingpur, Maharashtra 416101</p>
+        <p>&copy; 2025 Dr. J. J. Magdum College Of Engineering. All rights reserved.</p>
+        <p>Developed by: Pratik Bamane</p>
+    </footer>
+
+    <script>
+        // Apply Now functionality
+        function applyNow() {
+            const currentMonth = new Date().getMonth() + 1;
+            if (currentMonth >= 5 && currentMonth <= 7) {
+                window.location.href = 'Admission_page.html';
+            } else {
+                alert('Admission process will start from May 2024. Please check back later!');
+            }
+        }
+
+        // Animated counter function with improved performance
+        function animateCounter(element, target) {
+            let current = 0;
+            const duration = 2000;
+            const step = target / (duration / 16);
+            
+            function update() {
+                current += step;
+                if (current < target) {
+                    element.textContent = Math.round(current) + (target > 100 ? '+' : '');
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = target + (target > 100 ? '+' : '');
+                }
+            }
+            
+            update();
+        }
+
+        // Intersection Observer for stats with better performance
+        const stats = document.querySelectorAll('.stat');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    const numberElement = entry.target.querySelector('.stat-number');
+                    const target = parseInt(numberElement.getAttribute('data-target'));
+                    animateCounter(numberElement, target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        stats.forEach(stat => observer.observe(stat));
+
+        // Enhanced Chatbot functionality with improved response system
+        const responses = {
+            greeting: [
+                "Hello! How can I help you today?",
+                "Hi there! Welcome to JJMCOE. What can I do for you?",
+                "Greetings! How may I assist you?"
+            ],
+            admission: {
+                general: "For admissions, please visit our Admissions page or contact our admission cell at +91 2332 227901",
+                process: "The admission process involves: 1. Online application 2. Document verification 3. Merit list selection 4. Fee payment",
+                requirements: "Basic requirements include: 12th PCM scores, JEE/CET scores, and valid ID proof",
+                deadline: "Admissions for 2024-25 will start from May 2024"
+            },
+            courses: {
+                list: "We offer various engineering courses including Civil, Mechanical, Computer Science, Electronics, Electrical, IT, and AI & DS",
+                duration: "All our B.Tech programs are 4-year full-time courses",
+                syllabus: "For detailed syllabus information, please visit our course page"
+            },
+            fees: {
+                structure: "Our fee structure varies by course. Please visit our Fees page for detailed information",
+                payment: "We accept online payments, DD, and bank transfers",
+                scholarship: "Merit-based scholarships are available for eligible students"
+            },
+            facilities: {
+                campus: "Our campus features modern labs, library, sports facilities, and Wi-Fi",
+                hostel: "We provide separate hostels for boys and girls with all modern amenities",
+                transport: "College bus facility is available from major nearby cities"
+            },
+            placement: {
+                companies: "Top recruiters include TCS, Infosys, Wipro, and many more",
+                statistics: "We have achieved 85% placement rate in the last academic year",
+                training: "We provide pre-placement training and soft skills development"
+            }
+        };
+
+        function findBestMatch(input) {
+            input = input.toLowerCase();
+            let bestMatch = {
+                category: null,
+                subcategory: null,
+                score: 0
+            };
+
+            // Keywords mapping
+            const keywords = {
+                greeting: ['hi', 'hello', 'hey', 'greetings'],
+                admission: ['admission', 'apply', 'enroll', 'join'],
+                courses: ['course', 'program', 'branch', 'study'],
+                fees: ['fee', 'payment', 'cost', 'charges'],
+                facilities: ['facility', 'amenity', 'infrastructure', 'campus'],
+                placement: ['placement', 'job', 'company', 'recruit']
+            };
+
+            // Check for keyword matches
+            for (let category in keywords) {
+                for (let keyword of keywords[category]) {
+                    if (input.includes(keyword)) {
+                        bestMatch.category = category;
+                        bestMatch.score += 1;
+                    }
+                }
+            }
+
+            // If no direct match found, use default greeting
+            if (!bestMatch.category) {
+                bestMatch.category = 'greeting';
+            }
+
+            // Determine subcategory based on additional keywords
+            if (bestMatch.category) {
+                const subCategories = responses[bestMatch.category];
+                if (typeof subCategories === 'object' && !Array.isArray(subCategories)) {
+                    for (let sub in subCategories) {
+                        if (input.includes(sub)) {
+                            bestMatch.subcategory = sub;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return bestMatch;
+        }
+
+        function generateResponse(input) {
+            const match = findBestMatch(input);
+            const category = match.category;
+            const subcategory = match.subcategory;
+
+            if (Array.isArray(responses[category])) {
+                return responses[category][Math.floor(Math.random() * responses[category].length)];
+            } else if (subcategory && responses[category][subcategory]) {
+                return responses[category][subcategory];
+            } else {
+                return responses[category].general || Object.values(responses[category])[0];
+            }
+        }
+
+        function toggleChatbot() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.style.display = chatbot.style.display === 'none' ? 'flex' : 'none';
+            if(chatbot.style.display === 'flex') {
+                addBotMessage("Hello! How can I help you today?");
+            }
+        }
+
+        function addBotMessage(message) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageElement = document.createElement('div');
+            messageElement.className = 'message bot-message';
+            messageElement.textContent = message;
+            messagesDiv.appendChild(messageElement);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function addUserMessage(message) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageElement = document.createElement('div');
+            messageElement.className = 'message user-message';
+            messageElement.textContent = message;
+            messagesDiv.appendChild(messageElement);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            
+            if(message) {
+                addUserMessage(message);
+                input.value = '';
+                
+                setTimeout(() => {
+                    const response = generateResponse(message);
+                    addBotMessage(response);
+                }, 1000);
+            }
+        }
+
+        // Allow sending message with Enter key
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if(e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Initialize chatbot as hidden
+        document.getElementById('chatbot').style.display = 'none';
+    </script>
+</body>
+</html>

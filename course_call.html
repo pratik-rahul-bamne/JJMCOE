@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Dr. J. J. Magdum College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background-color: #004aad;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h1 {
+            color: #004aad;
+            margin-bottom: 10px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .course-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h3 {
+            color: #004aad;
+            margin-bottom: 15px;
+        }
+
+        .course-details {
+            margin-top: 15px;
+        }
+
+        .course-details p {
+            margin-bottom: 10px;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background: #004aad;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .apply-btn:hover {
+            background: #003380;
+        }
+
+        footer {
+            background: #004aad;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .navbar {
+            background-color: #004aad;
+            padding: 15px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <span>DTE Code : EN-6277</span>
+        <div class="contact-info">
+            <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
+            <a href="mailto:info@jjmcoe.ac.in"><i class="fas fa-envelope"></i> info@jjmcoe.ac.in</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">
+            <img src="images/college-logo.png" alt="College Logo" style="width: 100px; margin-bottom: 20px;">
+            <h4>Dr. J. J. Magdum Trust's</h4>
+            <h1>Dr. J. J. Magdum College Of Engineering</h1>
+            <h3>An Autonomous Institute (From 2024-25)</h3>
+            <p>NAAC Accredited | NBA Approved | AICTE Recognized</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Admission_page.html">Admission</a></li>
+            <li><a href="course_call.html">Course</a></li>
+            <li><a href="fees_page.html">Fees</a></li>
+            <li><a href="Contact_page.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="title">
+            <h1>Our Engineering Programs</h1>
+            <p>Choose from our wide range of AICTE approved engineering courses</p>
+        </div>
+
+        <div class="courses">
+            <div class="course-card">
+                <h3>Civil Engineering</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,10,000/year</p>
+                    <p>Learn about structural design, construction management, and infrastructure development.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Structural Engineer</li>
+                        <li>Construction Manager</li>
+                        <li>Transportation Engineer</li>
+                    </ul>
+                    <button onclick="applyNow('Civil Engineering')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <h3>Mechanical Engineering</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,10,000/year</p>
+                    <p>Study machine design, thermal engineering, and manufacturing processes.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Design Engineer</li>
+                        <li>Production Manager</li>
+                        <li>Automotive Engineer</li>
+                    </ul>
+                    <button onclick="applyNow('Mechanical Engineering')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <h3>Computer Science</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,25,000/year</p>
+                    <p>Focus on programming, software development, and computer systems.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Software Developer</li>
+                        <li>System Analyst</li>
+                        <li>Full Stack Developer</li>
+                    </ul>
+                    <button onclick="applyNow('Computer Science')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <h3>Electronics Engineering</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,15,000/year</p>
+                    <p>Learn about electronic circuits, communication systems, and signal processing.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Electronics Design Engineer</li>
+                        <li>Communication Engineer</li>
+                        <li>VLSI Designer</li>
+                    </ul>
+                    <button onclick="applyNow('Electronics Engineering')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <h3>Electrical Engineering</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,15,000/year</p>
+                    <p>Study power systems, electrical machines, and control systems.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Power Systems Engineer</li>
+                        <li>Control Systems Engineer</li>
+                        <li>Energy Management Expert</li>
+                    </ul>
+                    <button onclick="applyNow('Electrical Engineering')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <h3>Information Technology</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,25,000/year</p>
+                    <p>Focus on networking, database management, and web technologies.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Network Administrator</li>
+                        <li>Database Administrator</li>
+                        <li>Cloud Solutions Architect</li>
+                    </ul>
+                    <button onclick="applyNow('Information Technology')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <h3>Artificial Intelligence & Data Science</h3>
+                <div class="course-details">
+                    <p>Duration: 4 Years</p>
+                    <p>Seats: 60</p>
+                    <p>Eligibility: 10+2 with PCM</p>
+                    <p>Fees: ₹1,35,000/year</p>
+                    <p>Learn about machine learning, data analytics, and AI applications.</p>
+                    <p>Career Prospects:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Data Scientist</li>
+                        <li>AI Engineer</li>
+                        <li>Machine Learning Specialist</li>
+                    </ul>
+                    <button onclick="applyNow('Artificial Intelligence & Data Science')" class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>For detailed course information, contact our admission cell</p>
+        <p>Email: admissions@jjmcoe.ac.in | Phone: +91 98765 43210</p>
+        <p>Address: Jaysingpur - Sangli Road, Jaysingpur, Maharashtra - 416101</p>
+    </footer>
+
+    <script>
+        function applyNow(course) {
+            // Check if it's admission season (May to July)
+            const currentMonth = new Date().getMonth() + 1;
+            
+            if (currentMonth >= 5 && currentMonth <= 7) {
+                // Store selected course in session storage
+                sessionStorage.setItem('selectedCourse', course);
+                // Redirect to admission page
+                window.location.href = 'Admission_page.html';
+            } else {
+                alert('Admission process for ' + course + ' will start from May 2024. Please check back later!\n\nFor more information, contact our admission cell at +91 98765 43210');
+            }
+        }
+    </script>
+</body>
+</html>

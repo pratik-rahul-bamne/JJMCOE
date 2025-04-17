@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dr. J. J. Magdum College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fd;
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, #004aad, #0084ff);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 20px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .title:hover {
+            transform: translateY(-5px);
+        }
+
+        .title img {
+            width: 120px;
+            height: auto;
+        }
+
+        .navbar {
+            background: #004aad;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 60px;
+            z-index: 999;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #0084ff;
+            color: #ffd700;
+        }
+
+        .contact-info-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #fff, #f8f9fd);
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-info-section h2 {
+            text-align: center;
+            color: #004aad;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            position: relative;
+        }
+
+        .contact-info-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #004aad;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            min-width: 300px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-item i {
+            font-size: 2.5rem;
+            color: #004aad;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover i {
+            transform: scale(1.2);
+        }
+
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            color: #004aad;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #004aad;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0,74,173,0.1);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #004aad, #0084ff);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,74,173,0.3);
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #004aad, #0084ff);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 70px;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: #ffd700;
+            transform: translateY(-5px);
+        }
+
+        /* Success Message Styles */
+        .success-message {
+            display: none;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 60px;
+            }
+            
+            .title {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <span>DTE Code : EN-6277</span>
+        <div class="contact-info">
+            <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
+            <a href="mailto:info@jjmcoe.ac.in"><i class="fas fa-envelope"></i> info@jjmcoe.ac.in</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">
+            <img src="images/college-logo.png" alt="College Logo">
+            <div class="title-text">
+                <h4>Dr. J. J. Magdum Trust's</h4>
+                <h1>Dr. J. J. Magdum College Of Engineering</h1>
+                <h3>An Autonomous Institute (From 2024-25)</h3>
+                <p>NAAC Accredited | NBA Approved | AICTE Recognized</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Admission_page.html">Admission</a></li>
+            <li><a href="course_call.html">Course</a></li>
+            <li><a href="fees_page.html">Fees</a></li>
+            <li><a href="Contact_page.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-info-section">
+        <h2>Get in Touch</h2>
+        <div class="contact-details">
+            <div class="contact-item" onclick="copyToClipboard('Jaysingpur-Wathar Road, Jaysingpur, Maharashtra 416101')">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>Jaysingpur-Wathar Road, Jaysingpur, Maharashtra 416101</p>
+            </div>
+            <div class="contact-item" onclick="window.location.href='tel:+919876543210'">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+91 98765 43210</p>
+                <p>+91 98765 43211</p>
+            </div>
+            <div class="contact-item" onclick="window.location.href='mailto:info@jjmcoe.ac.in'">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>info@jjmcoe.ac.in</p>
+                <p>admissions@jjmcoe.ac.in</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Send us a Message</h2>
+        <form id="contactForm" onsubmit="return submitForm(event)">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <div id="successMessage" class="success-message">
+            Thank you for your message! We will get back to you soon.
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/jjmcoe.jaysingpur/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/jjmcoe" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/school/jjmcoe/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/jjmcoe.jaysingpur/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2024 Dr. J. J. Magdum College Of Engineering. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert('Copied to clipboard!');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !phone || !subject || !message) {
+                alert('Please fill in all fields');
+                return false;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            // Phone validation
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid 10-digit phone number');
+                return false;
+            }
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+
+            return false;
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

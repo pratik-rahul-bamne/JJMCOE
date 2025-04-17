@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Fees - Dr. J. J. Magdum College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/fees_style.css">
+    <script src="js/fees_script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fd;
+        }
+
+        .top-bar {
+            background: linear-gradient(90deg, #004aad, #0084ff);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .title img {
+            width: 100px;
+            height: auto;
+        }
+
+        .title-text {
+            text-align: left;
+        }
+
+        .title-text h1 {
+            color: #004aad;
+            margin-bottom: 5px;
+        }
+
+        .navbar {
+            background-color: #004aad;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .fees-form {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .fees-form h2 {
+            color: #004aad;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .fees-form p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .fees-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .fees-form label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .fees-form input,
+        .fees-form select {
+            padding: 12px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .fees-form input:focus,
+        .fees-form select:focus {
+            border-color: #004aad;
+            outline: none;
+        }
+
+        .fees-form button {
+            background: linear-gradient(90deg, #004aad, #0084ff);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .fees-form button:hover {
+            transform: translateY(-2px);
+        }
+
+        #fees-details {
+            margin-top: 25px;
+            padding: 20px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            display: none;
+            background-color: #f8f9fd;
+        }
+
+        #fees-details h3 {
+            color: #004aad;
+            margin-bottom: 15px;
+        }
+
+        #fees-details p {
+            text-align: left;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .footer {
+            background: #004aad;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .fees-form {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <span>DTE Code : EN-6277</span>
+        <div class="contact-info">
+            <a href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
+            <a href="mailto:info@jjmcoe.ac.in"><i class="fas fa-envelope"></i> info@jjmcoe.ac.in</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">
+            <img src="images/college-logo.png" alt="College Logo">
+            <div class="title-text">
+                <h4>Dr. J. J. Magdum Trust's</h4>
+                <h1>Dr. J. J. Magdum College Of Engineering</h1>
+                <h3>An Autonomous Institute (From 2024-25)</h3>
+                <p>NAAC Accredited | NBA Approved | AICTE Recognized</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Admission_page.html">Admission</a></li>
+            <li><a href="course_call.html">Course</a></li>
+            <li><a href="fees_page.html">Fees</a></li>
+            <li><a href="Contact_page.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="fees-form">
+        <h2>Online Fee Payment</h2>
+        <p>Please enter your student UID to check fees details and make payment</p>
+        <form>
+            <label for="uid">Enter UID:</label>
+            <input type="text" id="uid" placeholder="Enter your student UID" required>
+            
+            <label for="semester">Select Semester:</label>
+            <select id="semester" required>
+                <option value="">Choose Semester</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+            </select>
+            
+            <button type="button" onclick="showFeesDetails()">Check Fees</button>
+            
+            <div id="fees-details">
+                <h3>Fees Details</h3>
+                <p>Tuition Fees: ₹50,000</p>
+                <p>Development Fees: ₹5,000</p>
+                <p>Other Charges: ₹2,000</p>
+                <p>Total Amount: ₹57,000</p>
+                <button type="button" onclick="proceedToPayment()" style="margin-top: 15px;">Proceed to Payment</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Dr. J. J. Magdum College Of Engineering. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/CollegeWebsite
+│── index.html                 # Main homepage
+│── Admission_page.html         # Admission form page
+│── Contact_page.html           # Contact form page
+│── fees_page.html              # Fees payment page
+│── css/
+│   ├── main_style.css          # Main stylesheet
+│   ├── admission_style.css     # Admission page styles
+│   ├── contact_style.css       # Contact page styles
+│   ├── fees_style.css          # Fees page styles
+│── js/
+│   ├── script.js               # Main JavaScript file
+│   ├── fees_script.js          # Fees page JavaScript
+│── images/
+│   ├── college-building.png    # Homepage banner image
+│   ├── logo.png                # College logo
+│   ├── favicon.ico             # Website favicon
+│── README.md                   # Project documentation
